@@ -5,15 +5,40 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello_world(username=None):
-    return render_template("index.html", name=username)
+def index():
+    return render_template("index.html")
 
 
-@app.route("/<username>")
-def hello_personal(username=None):
-    return render_template("personal.html", name=username)
+@app.route("/index.html")
+def index2():
+    return render_template("index.html")
 
 
-@app.route("/blog/2024/10")
-def blog():
-    return "These are my thoughts on blogs!"
+@app.route("/about.html")
+def about():
+    return render_template("about.html")
+
+
+@app.route("/components.html")
+def components():
+    return render_template("components.html")
+
+
+@app.route("/contact.html")
+def contact():
+    return render_template("contact.html")
+
+
+@app.route("/thankyou.html")
+def thankyou():
+    return render_template("tankyou.html")
+
+
+@app.route("/work.html")
+def work():
+    return render_template("work.html")
+
+
+@app.route("/works.html")
+def works():
+    return render_template("works.html")
